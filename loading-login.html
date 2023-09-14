@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ffffff; /* Background color for the page */
+            font-family: 'poppins', sans-serif;
+        }
+        
+        .loading-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .animated-text {
+            font-size: 50px;
+            color:red;
+            display: inline-block;
+            animation: animateText 2s ease-in-out infinite;
+        }
+
+        @keyframes animateText {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px); /* Adjust the Y-axis distance of the bounce */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="animated-text">
+            RKG
+        </div>
+    </div>
+
+    <script>
+        
+        setTimeout(function () {
+    
+            window.location.href = "LOGIN.html"; 
+        }, 5000);
+    </script>
+</body>
+</html>
